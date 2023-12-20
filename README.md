@@ -1,7 +1,8 @@
 # KeyDiff
 
-[![hex.pm version](https://img.shields.io/hexpm/v/key_diff.svg)](https://hex.pm/packages/key_diff)
-[![Build Status](https://travis-ci.org/mpotra/key_diff.svg?branch=master)](https://travis-ci.org/mpotra/key_diff)
+[![hex.pm version](https://img.shields.io/hexpm/v/key_diff)](https://hex.pm/packages/key_diff)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mpotra/key_diff/elixir.yml
+)](https://travis-ci.org/mpotra/key_diff)
 
 
 
