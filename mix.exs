@@ -39,7 +39,7 @@ defmodule KeyDiff.MixProject do
       {:map_diff, "~> 1.3", only: :dev},
       {:json_diff, "~> 0.1", only: :dev},
       {:json_diff_ex, "~> 0.6", only: :dev},
-      {:jason, "~> 1.4"},
+      {:jason, "~> 1.4", only: :dev},
       {:benchee, "~> 1.2", only: :dev},
 
       # Docs deps only
