@@ -15,7 +15,7 @@ The returning result is a tuple containing 3 lists:
 Each list entry is either a key or a list of keys in the subtree.
 
 Keys from the top level tree are single-term items in the list.
-For changes in the subtree, each item is a list `[K, [K(n-1), ...]]`` where the first
+For changes in the subtree, each item is a list `[K, [K(n-1), ...]]` where the first
 item is the top level key and the second item is a list of keys changed in the next level.
 
 The general rule is that if the `value` of a `key` is added, removed or updated, the `key` is returned as
