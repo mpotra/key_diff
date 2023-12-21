@@ -13,7 +13,7 @@ defmodule KeyDiff.MixProject do
       deps: deps(),
 
       # Hex
-      description: "",
+      description: "Compares two maps returns lists of key additions, deletions and updates",
       package: package(),
 
       # Docs
