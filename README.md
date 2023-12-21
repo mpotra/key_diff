@@ -65,7 +65,7 @@ end
 
 ## Options
 
-`KeyDiff.diff/2` supports the `depth` option, that will stop the diffing at the specified level of depth
+`KeyDiff.diff/3` supports the `depth` option, that will stop the diffing at the specified level of depth
 in the map; it will recurse into the map only `depth` number of times.
 
 This is useful in quickly determining changes in `depth` number of levels, instead of having the entire
@@ -89,16 +89,20 @@ For example:
 should first be transformed into the following map:
 
 ```elixir
-  a = %{"key_a" => %{"1" => %{"id": 1}, "2" => %{"id": 2}}}
+  a = %{"key_a" => %{1 => %{"id": 1}, 2 => %{"id": 2}, 3 => %{"id": 3}}}
 ```
 
-This way, `a` can now be used with `KeyDiff.diff/2` and it will look for changes in the maps under the `"key_a"` key value.
+This way, `a` can now be used with `KeyDiff.diff/3` and it will look for changes in the maps under the `"key_a"` key value.
 
 ## Benchmarks and performance
 
 Benmarking `key_diff` with `json_diff`, `map_diff` and `json_diff_ex` on large maps, 
-showed that `key_diff` is 2-3x times faster than the other libraries.
+showed that `key_diff` is 4-8x times faster than the other libraries.
 The benchmarks were done with `depth: nil` (default) meaning the entire tree was walked.
+
+```
+  mix run benchmark.exs
+```
 
 ## Documentation
 
