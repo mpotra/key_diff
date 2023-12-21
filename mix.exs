@@ -1,5 +1,6 @@
 defmodule KeyDiff.MixProject do
   use Mix.Project
+
   @source_url "https://github.com/mpotra/key_diff"
   @version "0.1.0"
 
@@ -30,11 +31,21 @@ defmodule KeyDiff.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
-  end
+    [
+      # Development only deps
+      {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
 
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
+      # Benchmarking
+      {:map_diff, "~> 1.3", only: :dev},
+      {:json_diff, "~> 0.1", only: :dev},
+      {:json_diff_ex, "~> 0.6", only: :dev},
+      {:jason, "~> 1.4"},
+      {:benchee, "~> 1.2", only: :dev},
+
+      # Docs deps only
+      {:ex_doc, ">= 0.0.0", only: :docs, runtime: false}
+    ]
+  end
 
   defp package do
     [
